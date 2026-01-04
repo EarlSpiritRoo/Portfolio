@@ -13,27 +13,40 @@ const HeroText = () => {
         <div className="flex-col hidden md:flex c-space">
             <motion.h1 
             className="text-4xl font-medium" 
-            initial={{opacity: 0, x: -50 }}
-            animate={{opacity: 1, x: 0 }}
+            variants={variants}
+            initial="hidden"
+            animate="visible"
             transition={{delay: 1 }}
             >
               Hi I'm Yasmine
               </motion.h1>
             <div className="flex flex-col items-start">
                 <motion.p className="text-5xl font-medium text-neutral-300"
-                initial={{opacity: 0, x: -50 }}
-                  animate={{opacity: 1, x: 0 }}
-                  transition={{delay: 1.2 }}
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                transition={{delay: 1.2 }}
                 >
                   A Developer <br /> Dedicated to Crafting
                 </motion.p>
-                <motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{delay: 1.5 }}   
+                >
                     <FlipWords 
                     words={words} 
                     className="font-black text-white text-8xl"
                     />
                 </motion.div>
-                <motion.p className="text-4xl font-medium text-neutral-300"> Web Solutions
+                <motion.p className="text-4xl font-medium text-neutral-300"
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{delay: 1.8 }}
+                > 
+                  Web Solutions
                 </motion.p>
             </div>
         </div>
